@@ -4,6 +4,7 @@
   <remote  name="grapheneos"
     fetch="https://github.com/GrapheneOS/"
     revision="refs/heads/17" />
+  <remote name="android-port" fetch="https://github.com/liamsmith827-bot/"/>
 
   <default revision="main-kernel-2026" remote="aosp" sync-j="4"/>
 
@@ -13,7 +14,7 @@
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel"/>
     <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="MODULE.bazel"/>
   </project>
-  <project path="common" name="kernel_common-6.18" remote="grapheneos"/>
+  <project path="common" name="linux" remote="android-port" revision="refs/heads/android-port/6.18_astra-xhigh_v0"/>
   <project path="common-modules/wonder" name="kernel/common-modules/wonder" revision="android17-6.18"/>
   <project path="common-modules/trusty" name="kernel/common-modules/trusty"/>
   <project path="common-modules/virtio-media" name="platform/external/virtio-media"/>
